@@ -6,26 +6,28 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+require 'faker'
+
 Like.destroy_all
 Comment.destroy_all
 Post.destroy_all
 User.destroy_all
 
 baseball_teams = ['Arizona Diamondbacks','Atlanta Braves','Baltimore Orioles','Boston Red Sox','Chicago Cubs','Chicago White Sox','Cincinnati Reds','Cleveland Indians','Colorado Rockies','Detroit Tigers','Houston Astros','Kansas City Royals','Los Angeles Angels','Los Angeles Dodgers','Miami Marlins','Milwaukee Brewers','Minnesota Twins','New York Mets','New York Yankees','Oakland Athletics','Philadelphia Phillies','Pittsburgh Pirates','San Diego Padres','San Francisco Giants','Seattle Mariners','St. Louis Cardinals','Tampa Bay Rays','Texas Rangers','Toronto Blue Jays','Washington Nationals']
-
-require 'faker'
+media_type = ["gif"]
 
 5.times do 
-    User.create( email: Faker::Internet.unique.email, password: "abc123" )
+    User.create( email: Faker::Internet.unique.email, password: "abc123", username: Faker::TvShows::TwinPeaks.unique.character)
 end
 
 10.times do 
     Post.create(
         user_id: User.all.sample.id, 
-        title: Faker::Lorem.words, 
+        title: Faker::Lorem.sentence(word_count: 3), 
         description: Faker::Lorem.paragraph(sentence_count: 3),
         team1: baseball_teams.sample,
         team2: baseball_teams.sample,
+        media_type: "gif",
         media_link: "https://gph.is/2qoZcZE")
 end
 
@@ -37,7 +39,7 @@ end
     )
 end
 
-5.times do 
+15.times do 
     Like.create(
         user_id: User.all.sample.id, 
         post_id: Post.all.sample.id
