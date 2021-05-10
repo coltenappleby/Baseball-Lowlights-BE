@@ -1,5 +1,5 @@
-class PostSerializer < ActiveModel::Serializer
-    attributes :id, :username, :created_at
+class UserSerializer < ActiveModel::Serializer
+    attributes :id, :username, :updated_at
 
     has_many :comments
     has_many :likes
