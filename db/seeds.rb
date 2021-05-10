@@ -28,8 +28,18 @@ end
         team1: baseball_teams.sample,
         team2: baseball_teams.sample,
         media_type: "gif",
-        media_link: "https://gph.is/2qoZcZE")
+        media_link: 'https://thumbs.gfycat.com/ComplexAppropriateGelding-max-1mb.gif')
 end
+
+Post.create(
+    user_id: User.all.sample.id,
+    title: Faker::Lorem.sentence(word_count: 3), 
+    description: Faker::Lorem.paragraph(sentence_count: 3),
+    team1: baseball_teams.sample,
+    team2: baseball_teams.sample,
+    media_type: "video",
+    media_link: '<iframe width="560" height="315" src="https://www.youtube.com/embed/YDHihWAKicI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>')
+
 
 10.times do
     Comment.create(
