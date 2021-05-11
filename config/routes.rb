@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  post 'users/login', to: 'users#login'
+
   resources :likes
   resources :comments
   resources :posts

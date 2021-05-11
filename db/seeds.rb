@@ -20,6 +20,8 @@ media_type = ["gif"]
     User.create( email: Faker::Internet.unique.email, password: "abc123", username: Faker::TvShows::TwinPeaks.unique.character)
 end
 
+User.create(email: "seth@seth.com", password: "abc123", username: "seth")
+
 10.times do 
     Post.create(
         user_id: User.all.sample.id, 
@@ -38,7 +40,8 @@ Post.create(
     team1: baseball_teams.sample,
     team2: baseball_teams.sample,
     media_type: "video",
-    media_link: '<iframe width="560" height="315" src="https://www.youtube.com/embed/YDHihWAKicI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>')
+    media_link: '<iframe width="560" height="315" src="https://www.youtube.com/embed/YDHihWAKicI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+)
 
 
 10.times do
