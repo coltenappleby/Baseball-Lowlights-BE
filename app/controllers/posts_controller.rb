@@ -7,7 +7,11 @@ class PostsController < ApplicationController
 
     def show 
         post = Post.find(params[:id])
-        render json: post
+        if post
+            render json: post
+        else
+            render json: {error: "Cannot find this post"}
+        end
     end
 
 
