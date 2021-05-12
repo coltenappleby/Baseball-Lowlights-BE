@@ -1,3 +1,3 @@
 class CommentSerializer < ActiveModel::Serializer
-  attributes :username, :id, :content, :media_link, :updated_at
+  attributes :username, :user_id, :id, :content, :media_link, :updated_at
 end
