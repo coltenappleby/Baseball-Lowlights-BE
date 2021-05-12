@@ -1,8 +1,7 @@
 class PostsController < ApplicationController
 
     def index
-        byebug
-        posts = Post.all.limit(2)
+        posts = Post.all
         sorted_posts = posts.sort {|a, b| b.id <=> a.id }
         render json: sorted_posts
     end
