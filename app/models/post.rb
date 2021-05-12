@@ -5,7 +5,7 @@ class Post < ApplicationRecord
   has_many :likes, dependent: :destroy
 
 
-  validates :title, :team1, :team2, presence: true
+  validates :title, :team1, :media_type, presence: true
 
   def likes_count
     self.likes.count
@@ -17,7 +17,6 @@ class Post < ApplicationRecord
 
   def username
     self.user.username
-  end 
-
+  end
 
 end

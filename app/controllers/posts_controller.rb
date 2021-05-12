@@ -2,7 +2,8 @@ class PostsController < ApplicationController
 
     def index
         posts = Post.all
-        render json: posts
+        sorted_posts = posts.sort {|a, b| b.id <=> a.id }
+        render json: sorted_posts
     end
 
     def show 
