@@ -1,24 +1,22 @@
-# README
+# Baseball Lowlights 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Backend is in Ruby on Rails with a SQLite database.
+The front end was built in React.js, HTML, and CSS.
+[Link to front end](https://github.com/coltenappleby/Baseball-Lowlights-FE)
 
-Things you may want to cover:
 
-* Ruby version
 
-* System dependencies
+## Getting Started
+1. Clone this repo and the frontend
+2. run 'bundle install'
+3. run 'rails s'
+4. Sign In!
 
-* Configuration
 
-* Database creation
+## To Do
+* Add an API for players to be tagged in a Post
+* Create a new homepage
 
-* Database initialization
 
-* How to run the test suite
+## Demo
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
