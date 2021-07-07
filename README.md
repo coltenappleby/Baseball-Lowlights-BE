@@ -5,7 +5,7 @@ The front end was built in React.js, HTML, and CSS.
 [Link to front end](https://github.com/coltenappleby/Baseball-Lowlights-FE)
 
 This was a group project done with [MelSwell](https://github.com/MelSwell).
-Link to the orginal repo can be found [here](https://github.com/coltenappleby/baseball-lowlights-backend)
+Link to the orginal repo can be found [here](https://github.com/coltenappleby/baseball-lowlights-backend).
 
 
 
