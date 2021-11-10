@@ -79,8 +79,20 @@ test:
 # Read https://guides.rubyonrails.org/configuring.html#configuring-a-database
 # for a full overview on how database connection configuration can be specified.
 #
+
+# # Default Production
+# production:
+#   <<: *default
+#   database: baseball_lowlights_backend_production
+#   username: baseball_lowlights_backend
+#   password: <%= ENV['BASEBALL_LOWLIGHTS_BACKEND_DATABASE_PASSWORD'] %>
+
 production:
-  <<: *default
-  database: baseball_lowlights_backend_production
-  username: baseball_lowlights_backend
-  password: <%= ENV['BASEBALL_LOWLIGHTS_BACKEND_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  encoding: utf8
+  database: dfoib8n2k80v06
+  username: <%= ENV['BASEBALL_LOWLIGHTS_BACKEND_DATABASE_USERNAME_HEROKU'] %>
+  password: <%= ENV['BASEBALL_LOWLIGHTS_BACKEND_DATABASE_PASSWORD_HEROKU'] %>
+  host: ec2-34-194-100-156.compute-1.amazonaws.com
+  sslmode: require 
+
